@@ -54,21 +54,21 @@
 
 // Promise
 
-const getData = () => {
-    return new Promise (( resolve, reject )=>{
-        setTimeout(()=>{
-            const error = true;
-            if (error){
-                reject('Success');
-            } else{
-                resolve('Error');
-            }
-        }, 2000);
-    })
-}
-getData()
-.then(success => console.log(success))
-.catch (error => console.log(error))
+//const getData = () => {
+//    return new Promise (( resolve, reject )=>{
+//        setTimeout(()=>{
+//            const error = true;
+//            if (error){
+//                reject('Success');
+//            } else{
+//                resolve('Error');
+//            }
+//        }, 2000);
+//    })
+//}
+//getData()
+//.then(success => console.log(success))
+//.catch (error => console.log(error))
 
 
 // Chaining
@@ -100,35 +100,35 @@ getData()
 
 // Aysnc dan Await 
 
-//const getData = () => {
-//    return new Promise (( resolve, reject )=>{
-//       setTimeout(()=>{
-//            const error = false;
-//            if (error){
-//                reject('Error');
-//            } else{
-//                resolve(10);
-//            }
-//        }, 2000);
-//    })
-//}
-//const getName = id => {
-//    return new Promise((resolve, reject)=>{
-//        setTimeout(() => {
-//            resolve ( `ID: $(id) Success`)
-//        }, 2000)
-//    })
-//}
-//const getNamebyId = async () => {
-//    let id, success;
-//    try {
-//        id = await getData();
-//        success = await getName (id);
-//        //console.log(success);
-//    }catch (error){
-//        console.log (error);
-//    }
-//    return success;
-//}
-//getNamebyId(result);
-//getNamebyId().then(result => console.log(result));
+const getData = () => {
+    return new Promise (( resolve, reject )=>{
+       setTimeout(()=>{
+            const error = false;
+            if (error){
+                reject('Error');
+            } else{
+                resolve(10);
+            }
+        }, 2000);
+    })
+}
+const getName = id => {
+    return new Promise((resolve, reject)=>{
+        setTimeout(() => {
+            resolve ( `ID: $(id) Success`)
+        }, 2000)
+    })
+}
+const getNamebyId = async () => {
+    let id, success;
+    try {
+        id = await getData();
+        success = await getName (id);
+        //console.log(success);
+    }catch (error){
+        console.log (error);
+    }
+    return success;
+}
+//getNamebyId(result); 
+getNamebyId().then(result => console.log(result));
