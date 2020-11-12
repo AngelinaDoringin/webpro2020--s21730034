@@ -1,7 +1,3 @@
-import './App.css';
-import Card from './Components/Card';
-import { person } from "./utils/person";
-import Counter from '/Components/Counter';
 // import './App.css';
 // import Headerr from './Components/Headerr';
 // import Hellow from './Components/Hellow';
