@@ -17,7 +17,7 @@
 // }
 // export default App;
 // 
-
+  
 import React from 'react';
 import './App.css';
 const sortByPower = (a, b) => {
@@ -67,3 +67,7 @@ const App = () => {
   );
 }
 export default App;
+
+/*
+Pertemuan 23 no class
+*/
