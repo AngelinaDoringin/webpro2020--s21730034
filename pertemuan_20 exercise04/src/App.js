@@ -2,6 +2,7 @@
 // import Headerr from './Components/Headerr';
 // import Hellow from './Components/Hellow';
 // import Content from './Components/Content';
+// import axios from "axios";
 
 
 // function App() {
@@ -71,3 +72,42 @@ export default App;
 /*
 Pertemuan 23 no class
 */
+
+/*
+//PERTEMUAN 24
+class App extends Component{
+ 
+  state = {
+    users: [],
+  };
+ 
+  componentDidMount() {
+  // fetch('https://jsonplaceholder.typicode.com/users')
+  //.then((response) => response.json())
+  //.then((json) => this.setState({users:json}));
+  
+ 
+  //axios
+  //.get("https://jsonplaceholder.typicode.com/users");
+  //.then((response) =>this.setState({users: response.data}));
+   
+}  
+  render (){
+    return( 
+    <>
+      {this.state.users.map((item) =>{
+        return(
+        <Card
+          name={item.name}
+          username={item.username}
+          email = {item.email}
+          phone= {item.phone}
+        />
+        );
+    })}
+    </> 
+    );  
+  }
+}
+  export default App;
+*/ 
